@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selamat Hari Raya Idul Fitri</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <p>Henglo World</p>
+<body>    
+    <div class="ketupat">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+    </div>
+    <div class="lebaran">        
+        <div class="container">
+            <p class=" green violet gold"><a href="https://github.com/karimiariqn">karimiariqn</a> & <a href="https://github.com/IMPHNEN">IMPHNEN</a> mengucapkan</p>
+        <h1 class=" green violet gold">Selamat Hari Raya Idul Fitri</h1>
+    </div>        
+    <div class="warna">
+        <h1>pilih warna</h1>
+        <div class="circle green"></div>
+        <div class="circle violet"></div>
+        <div class="circle gold"></div>
+        </div>
+    </div>
+    </div>    
+
+
+    <script>
+        const circles = document.querySelectorAll(".circle")
+        circles.forEach(circle => {
+            circle.addEventListener("click", (style) =>{
+                const computedStyle = window.getComputedStyle(style.target)
+                document.body.style.backgroundColor  = computedStyle.backgroundColor
+                document.querySelectorAll('.pixel').style.backgroundColor = computedStyle.backgroundColor
+                document.querySelectorAll(".lebaran a").style.color = computedStyle.Color
+            })
+        })
+    </script>
 </body>
 </html>
